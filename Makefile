@@ -79,7 +79,7 @@ test-examples:
 
 .PHONY: test-fastapi
 test-fastapi:
-	git clone https://github.com/tiangolo/fastapi.git --single-branch --branch 0.79.0
+	git clone https://github.com/tiangolo/fastapi.git --single-branch
 	./tests/test_fastapi.sh
 
 .PHONY: all
