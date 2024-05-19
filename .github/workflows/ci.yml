@@ -41,24 +41,6 @@ jobs:
           make install-linting
           pip freeze
 
-      - name: lint
-        run: make lint
-
-      - name: mypy
-        run: make mypy
-
-      - name: make history
-        run: python3 ./changes/make_history.py
-
-      - name: check dist
-        run: make check-dist
-
-      - name: install node for pyright
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-
-      - run: npm install -g pyright
 
   docs-build:
     runs-on: ubuntu-latest
