@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - main
       - 1.9.X-fixes
       - pydantic-v2-blog
     tags:
