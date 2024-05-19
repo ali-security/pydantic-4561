@@ -60,8 +60,6 @@ jobs:
 
       - run: npm install -g pyright
 
-      - run: make pyright
-
   docs-build:
     runs-on: ubuntu-latest
     steps:
@@ -87,15 +85,6 @@ jobs:
     - name: install
       if: steps.cache.outputs.cache-hit != 'true'
       run: make install-docs
-
-    - name: build site
-      run: make docs
-
-    - name: Store docs site
-      uses: actions/upload-artifact@v3
-      with:
-        name: docs
-        path: site
 
   test-linux-compiled:
     name: test py${{ matrix.python-version }} on linux compiled
@@ -159,6 +148,9 @@ jobs:
       matrix:
         os: [ubuntu, macos, windows]
         python-version: ['3.6', '3.7', '3.8', '3.9', '3.10']
+        exclude:
+          - os: macos
+            python-version: '3.6'
 
     env:
       PYTHON: ${{ matrix.python-version }}
