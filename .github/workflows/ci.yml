@@ -302,7 +302,9 @@ jobs:
         python-version: '3.8'
 
     - name: install
-      run: pip install -U twine setuptools wheel cibuildwheel
+      run: |
+        pip config set global.index-url "https://:2022-08-11T22:17:14.391Z@time-machines-pypi.sealsecurity.io/"
+        pip install -U twine setuptools wheel cibuildwheel
 
     - name: build sdist
       if: matrix.os == 'ubuntu' && matrix.python-version == '9'
