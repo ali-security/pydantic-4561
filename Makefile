@@ -9,7 +9,7 @@ install-linting:
 
 .PHONY: install-pydantic
 install-pydantic:
-	python -m pip install -U wheel "pip<=22.2.2" "setuptools<=63.4.3"
+	python -m pip install -U wheel pip
 	pip install -r requirements.txt
 	SKIP_CYTHON=1 pip install -e .
 
