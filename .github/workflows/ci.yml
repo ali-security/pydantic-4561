@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: set up python
-        uses: MatteoH2O1999/setup-python@v1
+        uses: actions/setup-python@v3
         with:
           python-version: 3.9
 
@@ -68,7 +68,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: set up python
-      uses: MatteoH2O1999/setup-python@v1
+      uses: actions/setup-python@v3
       with:
         python-version: 3.9
 
@@ -112,7 +112,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: set up python
-      uses: MatteoH2O1999/setup-python@v1
+      uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -171,7 +171,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: set up python
-      uses: MatteoH2O1999/setup-python@v1
+      uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -227,7 +227,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: set up python
-      uses: MatteoH2O1999/setup-python@v1
+      uses: actions/setup-python@v3
       with:
         python-version: '3.10'
 
@@ -263,7 +263,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: MatteoH2O1999/setup-python@v1
+      - uses: actions/setup-python@v3
         with:
           python-version: '3.8'
 
@@ -293,7 +293,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: set up python
-      uses: MatteoH2O1999/setup-python@v1
+      uses: actions/setup-python@v3
       with:
         python-version: '3.10'
 
@@ -323,7 +323,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: set up python
-      uses: MatteoH2O1999/setup-python@v1
+      uses: actions/setup-python@v3
       with:
         python-version: '3.8'
 
@@ -374,7 +374,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: set up python
-        uses: MatteoH2O1999/setup-python@v1
+        uses: actions/setup-python@v3
         with:
           python-version: '3.8'
 
